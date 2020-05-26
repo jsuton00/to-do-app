@@ -1,0 +1,33 @@
+@import "../abstract/mixins";
+@import "../base/colours";
+@import "../base/typography";
+
+input {
+	&[type="checkbox"] {
+		@include size-element(15px, 15px);
+		cursor: pointer;
+	}
+	&[type="text"] {
+		@include size-element(100%, 50px);
+		@include spacing(5px 15px, 0 0 15px 0);
+		@include font-style($Josephine-Sans, 16px, 500, $darkslategray, null);
+		background-color: transparent;
+		border: 1px solid hsl(246, 25%, 77%);
+		border-radius: 5px;
+		line-height: 1.5;
+		outline: none;
+		&::placeholder {
+			@include font-style(
+				$Josephine-Sans,
+				0.9em,
+				$bold,
+				hsl(246, 25%, 77%),
+				null
+			);
+		}
+		&:focus {
+			border-radius: 5px;
+			border: 1px solid hsl(246, 25%, 77%);
+		}
+	}
+}

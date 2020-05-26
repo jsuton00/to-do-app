@@ -1,0 +1,8 @@
+@import "../abstract/mixins";
+@import "../base/colours";
+@import "../base/typography";
+
+main {
+	@include flex(column, wrap, null, center);
+	@include spacing(0, null);
+}

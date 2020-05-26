@@ -1,0 +1,271 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body,
+:root {
+  margin: 0;
+}
+
+.addButton {
+  height: 40px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: white;
+  background-color: #38cc8c;
+  border: 0;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+.addButton::after {
+  font-family: "FontAwesome";
+  font-size: 12px;
+  font-weight: 900;
+  content: "\f067";
+}
+
+.clearButton {
+  height: 40px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: #3e4453;
+  background-color: #f1f3f7;
+  border: 0;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+.clearButton::after {
+  font-family: "FontAwesome";
+  font-size: 12px;
+  font-weight: 900;
+  content: "\f55a";
+}
+
+.removeButton {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: #ba2525;
+  border-radius: 5px;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+.removeButton::before {
+  font-family: "FontAwesome";
+  font-size: 16px;
+  font-weight: 900;
+  content: "\f1f8";
+  position: absolute;
+  top: 6px;
+  left: 9px;
+}
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 50px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3e4453;
+  background-color: transparent;
+  border: 1px solid #b9b6d3;
+  border-radius: 5px;
+  line-height: 1.5;
+  outline: none;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #b9b6d3;
+}
+
+input[type="text"]:-ms-input-placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #b9b6d3;
+}
+
+input[type="text"]::-ms-input-placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #b9b6d3;
+}
+
+input[type="text"]::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #b9b6d3;
+}
+
+input[type="text"]:focus {
+  border-radius: 5px;
+  border: 1px solid #b9b6d3;
+}
+
+.todoList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  min-width: 400px;
+  max-width: 400px;
+}
+
+.todoList li {
+  list-style-type: none;
+}
+
+.todoList li.done {
+  text-decoration: line-through;
+}
+
+.todo-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #b9b6d3;
+  border-radius: 5px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-wrapper {
+  min-width: 400px;
+  width: 400px;
+  max-width: 400px;
+}
+
+.header h1 {
+  text-align: center;
+}
+
+.input-button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-button-wrapper-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body,
+#root {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3e4453;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+@import "./abstract/mixins";
+@import "./base/colours";
+@import "./base/reset";
+@import "./base/typography";
+@import "./components/buttons";
+@import "./components/input";
+@import "./components/lists";
+@import "./layout/header";
+@import "./layout/main";
+
+body,
+#root {
+	@include font-style($base-font-family, 16px, $normal, $text-colour, null);
+	@include size-element(100%, 100%);
+}
+
+.text-span {
+	@include spacing(null, 0 15px);
+}

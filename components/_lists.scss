@@ -1,0 +1,26 @@
+@import "../abstract/mixins";
+@import "../base/colours";
+@import "../base/typography";
+
+.todoList {
+	@include flex(column, wrap, center, center);
+	@include spacing(0, null);
+	@include size-element(400px, null);
+	min-width: 400px;
+	max-width: 400px;
+
+	li {
+		list-style-type: none;
+		&.done {
+			text-decoration: line-through;
+		}
+	}
+}
+
+.todo-item {
+	@include flex(row, wrap, space-between, center);
+	@include size-element(100%, 50px);
+	@include spacing(5px 20px, 0 0 10px 0);
+	border: 1px solid hsl(246, 25%, 77%);
+	border-radius: 5px;
+}

@@ -1,0 +1,56 @@
+@import "../abstract/mixins";
+@import "../base/colours";
+@import "../base/typography";
+
+.addButton {
+	@include size-element(null, 40px);
+	@include spacing(5px 20px, null);
+	@include font-style($Josephine-Sans, 0.7em, $bold, white, null);
+	background-color: $addButtonColour;
+	border: 0;
+	border-bottom: 4px solid rgba(0, 0, 0, 0.4);
+	border-radius: 5px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	cursor: pointer;
+	outline: none;
+	&::after {
+		@include font-style($FontAwesome, 12px, 900, null, null);
+		content: "\f067";
+	}
+}
+
+.clearButton {
+	@include size-element(null, 40px);
+	@include spacing(5px 20px, null);
+	@include font-style($Josephine-Sans, 0.7em, $bold, $darkslategray, null);
+	background-color: $clearButton;
+	border: 0;
+	border-bottom: 4px solid rgba(0, 0, 0, 0.4);
+	border-radius: 5px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	cursor: pointer;
+	outline: none;
+	&::after {
+		@include font-style($FontAwesome, 12px, 900, null, null);
+		content: "\f55a";
+	}
+}
+
+.removeButton {
+	display: inline-block;
+	@include size-element(30px, 30px);
+	background: $removeButtonColour;
+	border-radius: 5px;
+	color: white;
+	position: relative;
+	cursor: pointer;
+	&::before {
+		@include font-style($FontAwesome, 16px, 900, null, null);
+		content: "\f1f8";
+		position: absolute;
+		top: 6px;
+		left: 9px;
+	}
+}

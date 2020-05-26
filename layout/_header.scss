@@ -1,0 +1,24 @@
+@import "../abstract/mixins";
+@import "../base/colours";
+@import "../base/typography";
+
+.header {
+	@include flex(column, wrap, null, center);
+	&-wrapper {
+		min-width: 400px;
+		@include size-element(400px, null);
+		max-width: 400px;
+	}
+
+	h1 {
+		@include font-style(null, null, null, null, center);
+	}
+}
+
+.input-button-wrapper {
+	@include flex(column, wrap, null, center);
+	&-row {
+		@include flex(row, wrap, space-between, center);
+		@include spacing(null, 0 8px);
+	}
+}
